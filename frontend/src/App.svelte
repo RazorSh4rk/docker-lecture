@@ -32,7 +32,7 @@
   </div>
   <div>
     <input type="text" bind:value={inputVal} placeholder="new value" />
-    <button on:click={putValue}>upload</button>
+    <button on:click={putValue}> ⬆ </button>
   </div>
 </main>
 

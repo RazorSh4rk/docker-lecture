@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontend
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+      - name: frontend
+        resources:
+          limits:
+            memory: 1024Mi
+            cpu: "2"
+        image: razorsh4rk00/docker-tutorial-frontend
+        ports:
+        - containerPort: 5173

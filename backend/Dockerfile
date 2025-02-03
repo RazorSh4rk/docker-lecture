@@ -1,7 +1,9 @@
-FROM golang:1.23
+FROM golang
 
 WORKDIR /app
 COPY . .
+
+RUN echo "hello from docker"
 RUN go mod tidy
 RUN go build -o server .
 
